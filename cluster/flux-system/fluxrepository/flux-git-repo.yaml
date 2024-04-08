@@ -1,45 +1,49 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
+apiVersion: v1
+items:
+- apiVersion: source.toolkit.fluxcd.io/v1
+  kind: GitRepository
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"source.toolkit.fluxcd.io/v1","kind":"GitRepository","metadata":{"annotations":{},"creationTimestamp":"2024-04-07T19:41:20Z","finalizers":["finalizers.fluxcd.io"],"generation":2,"name":"flux-system","namespace":"flux-system","resourceVersion":"8082","uid":"8fa39966-197b-432b-9331-9b3979703dee"},"spec":{"interval":"1m0s","ref":{"branch":"main"},"secretRef":{"name":"flux-system-auth"},"timeout":"60s","url":"ssh://git@github.com/alikantunali/kubernetesTest-main"},"status":{"conditions":[{"lastTransitionTime":"2024-04-07T20:35:19Z","message":"building artifact","observedGeneration":2,"reason":"ProgressingWithRetry","status":"True","type":"Reconciling"},{"lastTransitionTime":"2024-04-07T20:35:19Z","message":"failed to configure authentication options: invalid 'ssh' auth option: 'identity' is required","observedGeneration":2,"reason":"AuthenticationFailed","status":"False","type":"Ready"},{"lastTransitionTime":"2024-04-07T19:41:32Z","message":"failed to configure authentication options: invalid 'ssh' auth option: 'identity' is required","observedGeneration":2,"reason":"AuthenticationFailed","status":"True","type":"FetchFailed"}],"observedGeneration":-1}}
+    creationTimestamp: "2024-04-07T19:41:20Z"
+    finalizers:
+    - finalizers.fluxcd.io
+    generation: 3
+    name: flux-system
+    namespace: flux-system
+    resourceVersion: "56026"
+    uid: 8fa39966-197b-432b-9331-9b3979703dee
+  spec:
+    interval: 1m0s
+    ref:
+      branch: main
+    secretRef:
+      name: flux-system-auth
+    timeout: 60s
+    url: ssh://git@github.com/alikantunali/kubernetesTest-main
+  status:
+    artifact:
+      digest: sha256:170dc09cea4cf2e4c2be6b735ce7b1a72887ed34b8c81a767fedaf75fd1db851
+      lastUpdateTime: "2024-04-08T00:58:00Z"
+      path: gitrepository/flux-system/flux-system/f29ae1792aed2e20ba3cee002ad4ce726dfa5600.tar.gz
+      revision: main@sha1:f29ae1792aed2e20ba3cee002ad4ce726dfa5600
+      size: 59290
+      url: http://source-controller.flux-system.svc.cluster.local./gitrepository/flux-system/flux-system/f29ae1792aed2e20ba3cee002ad4ce726dfa5600.tar.gz
+    conditions:
+    - lastTransitionTime: "2024-04-08T00:58:00Z"
+      message: stored artifact for revision 'main@sha1:f29ae1792aed2e20ba3cee002ad4ce726dfa5600'
+      observedGeneration: 3
+      reason: Succeeded
+      status: "True"
+      type: Ready
+    - lastTransitionTime: "2024-04-08T00:58:00Z"
+      message: stored artifact for revision 'main@sha1:f29ae1792aed2e20ba3cee002ad4ce726dfa5600'
+      observedGeneration: 3
+      reason: Succeeded
+      status: "True"
+      type: ArtifactInStorage
+    observedGeneration: 3
+kind: List
 metadata:
-  annotations:
-    kubectl.kubernetes.io/last-applied-configuration: |
-      {"apiVersion":"source.toolkit.fluxcd.io/v1","kind":"GitRepository","metadata":{"annotations":{},"name":"flux-system","namespace":"flux-system"},"spec":{"interval":"1m0s","ref":{"branch":"main"},"url":"ssh://git@github.com/YOUR_ACCOUNT/YOUR_REPO"}}
-  creationTimestamp: "2024-04-07T19:41:20Z"
-  finalizers:
-  - finalizers.fluxcd.io
-  generation: 2
-  name: flux-system
-  namespace: flux-system
-  resourceVersion: "8082"
-  uid: 8fa39966-197b-432b-9331-9b3979703dee
-spec:
-  interval: 1m0s
-  ref:
-    branch: main
-  timeout: 60s
-  url: ssh://git@github.com/alikantunali/kubernetesTest-main
-  secretRef:
-    name: flux-system-auth
-status:
-  conditions:
-  - lastTransitionTime: "2024-04-07T20:35:19Z"
-    message: building artifact
-    observedGeneration: 2
-    reason: ProgressingWithRetry
-    status: "True"
-    type: Reconciling
-  - lastTransitionTime: "2024-04-07T20:35:19Z"
-    message: 'failed to configure authentication options: invalid ''ssh'' auth option:
-      ''identity'' is required'
-    observedGeneration: 2
-    reason: AuthenticationFailed
-    status: "False"
-    type: Ready
-  - lastTransitionTime: "2024-04-07T19:41:32Z"
-    message: 'failed to configure authentication options: invalid ''ssh'' auth option:
-      ''identity'' is required'
-    observedGeneration: 2
-    reason: AuthenticationFailed
-    status: "True"
-    type: FetchFailed
-  observedGeneration: -1
+  resourceVersion: ""
