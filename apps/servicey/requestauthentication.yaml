@@ -4,7 +4,7 @@ metadata:
   name: servicey-requestauthentication
   namespace: flux-system
 spec:
-  interval: 2m0s
+  interval: 1m0s
   path: ./apps/servicey/requestauthentication
   prune: true
   sourceRef:
