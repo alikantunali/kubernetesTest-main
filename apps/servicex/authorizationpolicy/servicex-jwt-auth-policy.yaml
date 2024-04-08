@@ -1,7 +1,7 @@
 apiVersion: security.istio.io/v1beta1
 kind: AuthorizationPolicy
 metadata:
-  name: jwt-token-authorizationpolicy
+  name: jwt-token-authorizationpolicy-servicex
   namespace: servicex
 spec:
   selector:
