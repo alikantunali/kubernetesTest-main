@@ -63,5 +63,6 @@ spec:
         configMap: 
           name: cleverbit-config
           items:
-          - key: "Cleverbit__Enabled"
+          - key: Cleverbit__Enabled
+            path: Cleverbit__Enabled
 ---
