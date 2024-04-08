@@ -61,14 +61,14 @@ spec:
           items:
           - key: Cleverbit__Enabled
             path: Cleverbit__Enabled
-      - name: clb-secret-volume
+      - name: cleverbit-secret
         secret:
           secretName: cleverbit-secret
       volumeMounts:
       - name: config-volume
         mountPath: /app/kpf/enable-config
         readyOnly: true
-      - name: clb-secret-volume
+      - name: cleverbit-secret
         mountPath: /app/kpf/secret
         readOnly: true
 ---
