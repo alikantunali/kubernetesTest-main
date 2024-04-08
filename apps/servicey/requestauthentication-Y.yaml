@@ -1,11 +1,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: servicex-requestauthentication
+  name: servicey-requestauthentication
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./apps/servicex/requestauthentication
+  path: ./apps/servicey/requestauthentication-Y
   prune: true
   sourceRef:
     kind: GitRepository
