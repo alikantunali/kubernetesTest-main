@@ -9,12 +9,6 @@ spec:
   gateways:
     - istio-ingress/gateway
   http:
-  - match:
-    - port: 80
-    redirect:
-      uri: "/x"
-      authority: "servicex.cb-interview.com"	
-  http:
     - match:
         - port: 443
       route:
