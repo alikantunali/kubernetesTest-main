@@ -3,8 +3,5 @@ data:
   Cleverbit__Enabled: "true"
 kind: ConfigMap
 metadata:
-  creationTimestamp: "2024-04-08T00:08:38Z"
   name: cleverbit-config
   namespace: authority
-  resourceVersion: "47124"
-  uid: b006747b-786e-40d2-b871-229916faee0b
