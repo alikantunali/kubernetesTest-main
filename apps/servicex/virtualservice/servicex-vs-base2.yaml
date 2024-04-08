@@ -11,10 +11,15 @@ spec:
   http:
   - match:
     - uri:
-        exact: "/x"
+        prefix: "/" 
+    redirect:
+      uri: "/x"
+      authority: "servicex.cb-interview.com"
+  - match:
+    - uri:
+        prefix: "/" 
     route:
     - destination:
         host: servicex.servicex.svc.cluster.local
         port:
           number: 8080
-
