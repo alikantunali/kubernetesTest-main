@@ -55,10 +55,11 @@ spec:
         ports:
         - containerPort: 8080
         volumeMounts:
-        - name: cleverbit-config-volume
+        - name: config-volume
           mountPath: /app/kpf/enable-config
+          readOnly: true
       volumes:
-      - name: cleverbit-config-volume
+      - name: config-volume
         configMap: 
         name: cleverbit-config
         items:
