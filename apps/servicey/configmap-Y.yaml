@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./apps/servicey/confimap-Y
+  path: ./apps/servicey/configmap-Y
   prune: true
   sourceRef:
     kind: GitRepository
