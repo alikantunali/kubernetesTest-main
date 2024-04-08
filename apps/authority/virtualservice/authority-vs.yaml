@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: authority-vs
+  namespace: authority
+spec:
+  hosts:
+  - "authority.cb-interview.com"
+  gateways:
+  - istio-ingress/gateway
+  http:
+  - match:
+    - port: 443
+    route:
+    - destination:
+        host: authority.authority.svc.cluster.local
+        port:
+          number: 8080
+
