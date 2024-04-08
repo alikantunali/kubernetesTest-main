@@ -14,7 +14,7 @@ spec:
       protocol: HTTP
     hosts:
     - "*"
-    httpRedirect: true
+    httpsRedirect: true
   - port:
       number: 443
       name: https
