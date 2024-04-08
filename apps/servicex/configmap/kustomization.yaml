@@ -1,6 +1,4 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- authority-deploy.yaml
-- configmap.yaml
-- virtualservice.yaml
+- cleverbit-config-cm-servicex.yaml
