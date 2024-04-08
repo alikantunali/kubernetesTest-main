@@ -54,11 +54,14 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
-        volumes:
-        - name: cleverbit-config-volume
-          configMap:
-            name: cleverbit-config
         volumeMounts:
         - name: cleverbit-config-volume
           mountPath: /app/kpf/enable-config
+      volumes:
+      - name: cleverbit-config-volume
+        configMap: 
+        name: cleverbit-config
+        items:
+        - key: "Cleverbit__Enabled"
+          path: "Cleverbit__Enabled"
 ---
