@@ -64,5 +64,4 @@ spec:
           name: cleverbit-config
           items:
           - key: "Cleverbit__Enabled"
-            path: "Cleverbit__Enabled"
 ---
