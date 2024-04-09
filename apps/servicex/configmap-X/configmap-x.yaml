@@ -4,4 +4,4 @@ metadata:
   name: cleverbit-config
   namespace: servicex
 data:
-  Cleverbit__Enabled: true
+  Cleverbit__Enabled: "true"
