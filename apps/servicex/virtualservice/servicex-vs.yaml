@@ -5,16 +5,15 @@ metadata:
   namespace: servicex
 spec:
   hosts:
-  - "servicex.cb-interview.com"
+    - "servicex.cb-interview.com"
   gateways:
-  - istio-ingress/gateway
+    - istio-ingress/gateway
   http:
-  - match:
-    - uri:
-        exact: "/x"
-    route:
-    - destination:
-        host: servicex.servicex.svc.cluster.local
-        port:
-          number: 8080
+    - match:
+        - port: 443
+      route:
+        - destination:
+            host: servicex.servicex.svc.cluster.local
+            port:
+              number: 8080
 
