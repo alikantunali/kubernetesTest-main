@@ -4,5 +4,5 @@ metadata:
   name: cleverbit-config
   namespace: servicey
 data:
-  Cleverbit__Enabled: "true"
+  Cleverbit__Enabled: true
 
